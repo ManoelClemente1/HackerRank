@@ -22,13 +22,14 @@ public class BestPosition {
                 bestValue = numbers[i];
             }
 
-            if(minorValue > numbers[i]){
+            if(numbers[i] < minorValue || minorValue == 0 ){
                 minorValue = numbers[i];
             }
 
         }
 
         System.out.println("BEST VALUE: " + bestValue);
+        System.out.println("MINOR VALUE: " + minorValue);
 
     }
 }
