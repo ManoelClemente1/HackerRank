@@ -40,9 +40,6 @@ public class IncreaseEmployeeSalary {
         System.out.println("Enter the employee id that will have salary increase: ");
         int idToBeEncrease = sc.nextInt();
 
-        System.out.println("Enter the percentage: ");
-        int percentage = sc.nextInt();
-
         boolean employeeExists = true;
 
         for(Employee employee : listEmployees){
@@ -58,6 +55,9 @@ public class IncreaseEmployeeSalary {
         if(!employeeExists){
             throw new IllegalArgumentException("Employee id " + idToBeEncrease +" doesnt exists!");
         }
+
+        System.out.println("Enter the percentage: ");
+        int percentage = sc.nextInt();
 
         for(Employee employee : listEmployees) {
             if (employee.getId().equals(idToBeEncrease)) {
